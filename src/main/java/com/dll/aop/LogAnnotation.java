@@ -1,0 +1,20 @@
+package com.dll.aop;
+
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+//import javax.persistence.Inheritance;
+
+@Documented//说明该注解将被包含在javadoc中
+@Retention(RetentionPolicy.RUNTIME)// 注解会在class字节码文件中存在，在运行时可以通过反射获取到
+@Target(ElementType.METHOD)
+//@Inheritance//说明子类可以继承父类中的该注解
+public @interface LogAnnotation {
+
+    String value() default "-----AOP拦截执行完毕！----";
+}
+

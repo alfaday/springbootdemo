@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>头部标题</title>
+</head>
+<body>
+    <script src="vue_2.6.12/vue.min.js"></script>
+    <script src="axios_0.20.0/axios.min.js"></script>
+
+    <div id="vue_det">
+        <h1>site : {{site}}</h1>
+        <h1>url : {{url}}</h1>
+        <h1>{{details()}}</h1>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#vue_det',
+            data: {
+                site: "title1",
+                url: "www.runoob.com",
+                alexa: "10000"
+            },
+            methods: {
+                details: function() {
+                    return  this.site + " - vue --- ！";
+                }
+            }
+        })
+    </script>
+
+    <div id="app">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">反转字符串</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Runoob!'
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+
+    <div id="app1">
+        <h1>网站列表</h1>
+        <div v-for="site in info">
+            {{ site.name }}
+    </div>
+
+    <script type = "text/javascript">
+        new Vue({
+            el: '#app1',
+            data () {
+                return {
+                    info: null
+                }
+            },
+            mounted () {
+                axios.get('http://localhost:8080/view')
+                    .then(response => (this.info = response.data.sites))
+                    .catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+            }
+        })
+    </script>
+</body>
+</html>

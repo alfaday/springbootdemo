@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vue模板</title>
+</head>
+<body>
+    <script src="vue_2.6.12/vue.min.js"></script>
+    <script src="axios_0.20.0/axios.min.js"></script>
+
+    <div id="app">
+        <div v-html="message"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: '<h1>菜菜--1</h1>'
+            }
+        })
+    </script>
+
+    <div id="app1">
+        <h1>响应列表</h1>
+            {{ info }}
+    </div>
+
+    <script type = "text/javascript">
+        new Vue({
+            el: '#app1',
+            data () {
+                return {
+                    info: null
+                }
+            },
+            mounted () {
+                axios.get('http://localhost:8080/view3', {//get请求传参
+                    params: {
+                        name: 'jack'
+                    }
+                })
+                    .then(response => (this.info = response.data))
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        })
+    </script>
+
+</body>
+</html>
