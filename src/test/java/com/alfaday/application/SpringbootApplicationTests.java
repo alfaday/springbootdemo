@@ -1,7 +1,7 @@
-package com.dll.application;
+package com.alfaday.application;
 
-import com.dll.dao.UserDao;
-import com.dll.dao.mapper.UserMapper;
+import com.alfaday.dao.UserDao;
+import com.alfaday.dao.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

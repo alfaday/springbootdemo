@@ -1,4 +1,4 @@
-package com.dll.controller;
+package com.alfaday.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

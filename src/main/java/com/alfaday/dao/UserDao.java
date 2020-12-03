@@ -1,4 +1,4 @@
-package com.dll.dao;
+package com.alfaday.dao;
 
 import lombok.Data;
 

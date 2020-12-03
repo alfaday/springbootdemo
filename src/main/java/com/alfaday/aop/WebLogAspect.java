@@ -1,4 +1,4 @@
-package com.dll.aop;
+package com.alfaday.aop;
 
 import java.lang.reflect.Method;
 
@@ -8,7 +8,6 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
@@ -24,7 +23,7 @@ public class WebLogAspect {
     private static final Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
 
     //定义一个切入点
-    @Pointcut("@annotation(com.dll.aop.LogAnnotation)")
+    @Pointcut("@annotation(com.alfaday.aop.LogAnnotation)")
     public void annotationPointCut(){
 
     }

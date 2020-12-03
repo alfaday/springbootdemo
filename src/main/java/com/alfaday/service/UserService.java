@@ -1,7 +1,7 @@
-package com.dll.service;
+package com.alfaday.service;
 
-import com.dll.dao.UserDao;
-import com.dll.dao.mapper.UserMapper;
+import com.alfaday.dao.UserDao;
+import com.alfaday.dao.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

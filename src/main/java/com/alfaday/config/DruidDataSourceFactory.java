@@ -1,4 +1,4 @@
-package com.dll.config;
+package com.alfaday.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.datasource.unpooled.UnpooledDataSourceFactory;

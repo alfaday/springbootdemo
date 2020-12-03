@@ -1,6 +1,6 @@
-package com.dll.dao.mapper;
+package com.alfaday.dao.mapper;
 
-import com.dll.dao.UserDao;
+import com.alfaday.dao.UserDao;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

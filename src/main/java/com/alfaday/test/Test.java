@@ -1,4 +1,4 @@
-package com.dll.test;
+package com.alfaday.test;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

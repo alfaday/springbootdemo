@@ -1,7 +1,7 @@
-package com.dll.controller;
+package com.alfaday.controller;
 
-import com.dll.aop.LogAnnotation;
-import com.dll.service.UserService;
+import com.alfaday.aop.LogAnnotation;
+import com.alfaday.service.UserService;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
