@@ -2,9 +2,11 @@ package com.alfaday.service;
 
 import com.alfaday.dao.dos.UserDO;
 import com.alfaday.dao.mapper.UserDAO;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Data
 @Service
 public class UserService {
 
@@ -20,11 +22,4 @@ public class UserService {
         return "no-user!";
     }
 
-    public UserDAO getUserDAO() {
-        return userDAO;
-    }
-
-    public void setUserDAO(UserDAO userDAO) {
-        this.userDAO = userDAO;
-    }
 }
