@@ -2,7 +2,8 @@ package com.alfaday.application;
 
 import com.alfaday.dao.UserDao;
 import com.alfaday.dao.mapper.UserMapper;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ public class SpringbootApplicationTests {
 	private UserMapper userMapper;
 
 	@Test
-	void getUser() {
+	public void getUser() {
 		UserDao one = userMapper.getOne(1L);
 		logger.info("name=" + one.getUserName());
 	}
