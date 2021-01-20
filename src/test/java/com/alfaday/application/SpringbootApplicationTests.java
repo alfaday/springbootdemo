@@ -1,7 +1,7 @@
 package com.alfaday.application;
 
 import com.alfaday.dao.UserDao;
-import com.alfaday.dao.mapper.UserMapper;
+import com.alfaday.dao.mapper.UserDAO;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,11 +19,11 @@ public class SpringbootApplicationTests {
 
 
 	@Autowired
-	private UserMapper userMapper;
+	private UserDAO userDAO;
 
 	@Test
 	public void getUser() {
-		UserDao one = userMapper.getOne(1L);
+		UserDao one = userDAO.getOne(1L);
 		logger.info("name=" + one.getUserName());
 	}
 

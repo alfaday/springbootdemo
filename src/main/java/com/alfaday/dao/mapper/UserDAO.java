@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserMapper {
+public interface UserDAO {
 
     List<UserDao> getAll();
     UserDao getOne(Long id);
