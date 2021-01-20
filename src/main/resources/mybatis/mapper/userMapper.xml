@@ -3,14 +3,14 @@
 <mapper namespace="com.alfaday.dao.mapper.UserDAO" >
     <resultMap id="BaseResultMap" type="com.alfaday.dao.dos.UserDO" >
         <id column="id" property="id" jdbcType="BIGINT" />
-        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
         <result column="user_sex" property="userSex" jdbcType="VARCHAR"/>
         <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
     </resultMap>
 
     <sql id="Base_Column_List" >
-        id, user_name, password, user_sex, nick_name
+        id, username, password, user_sex, nick_name
     </sql>
 
     <select id="getAll" resultMap="BaseResultMap"  >
@@ -29,16 +29,16 @@
     <insert id="insert" parameterType="com.alfaday.dao.dos.UserDO" >
         INSERT INTO
         user
-        (user_name,password,user_sex)
+        (username,password,user_sex)
         VALUES
-        (#{userName}, #{password}, #{userSex})
+        (#{username}, #{password}, #{userSex})
     </insert>
 
     <update id="update" parameterType="com.alfaday.dao.dos.UserDO" >
         UPDATE
         user
         SET
-        <if test="userName != null">userName = #{userName},</if>
+        <if test="username != null">username = #{username},</if>
         <if test="password != null">password = #{password},</if>
         nick_name = #{nickName}
         WHERE

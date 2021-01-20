@@ -15,7 +15,7 @@ public class UserService {
     public String getUser(long id){
         UserDO one = userDAO.getOne(id);
         if(one != null){
-            return one.getUserName();
+            return one.getUsername();
         }
         return "no-user!";
     }
