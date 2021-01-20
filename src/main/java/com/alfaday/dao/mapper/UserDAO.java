@@ -1,6 +1,6 @@
 package com.alfaday.dao.mapper;
 
-import com.alfaday.dao.UserDao;
+import com.alfaday.dao.UserDO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
 @Repository
 public interface UserDAO {
 
-    List<UserDao> getAll();
-    UserDao getOne(Long id);
-    void insert(UserDao user);
-    void update(UserDao user);
+    List<UserDO> getAll();
+    UserDO getOne(Long id);
+    void insert(UserDO user);
+    void update(UserDO user);
     void delete(Long id);
 }

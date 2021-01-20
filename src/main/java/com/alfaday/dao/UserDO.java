@@ -3,7 +3,7 @@ package com.alfaday.dao;
 import lombok.Data;
 
 @Data
-public class UserDao {
+public class UserDO {
 
     private Long id;
     private String userName;
