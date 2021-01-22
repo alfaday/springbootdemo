@@ -25,6 +25,8 @@ public class SpringbootApplicationTests {
 	public void getUser() {
 		UserDO one = userDAO.getOne(1L);
 		logger.info("name=" + one.getUsername());
+		one = userDAO.selectById(1L);
+		logger.info("name=" + one.getUsername());
 	}
 
 }
