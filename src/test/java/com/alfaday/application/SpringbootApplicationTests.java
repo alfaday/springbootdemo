@@ -35,12 +35,15 @@ public class SpringbootApplicationTests {
 		logger.info("end $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 	}
 
-//	@Test
-//	public void getUser2() {
-//		UserDO one = userDAO.getOne(1L);
-//		logger.info("name=" + one.getUsername());
-//		List<UserDO> all = userDAO.getAll();
-//		logger.info("all size={}",all.size());
-//	}
+	@Test
+	public void insertUser(){
+		UserDO one = new UserDO();
+		one.setNickName("test");
+		one.setPassword("ps");
+		one.setUsername("xiaoming");
+		one.setUserSex("male");
+		int insert = userDAO.insert(one);
+		logger.info("insert ok, id={}",one.getId());
+	}
 
 }
