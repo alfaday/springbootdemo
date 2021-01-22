@@ -26,15 +26,21 @@ public class SpringbootApplicationTests {
 	@Test
 	public void getUser() {
 		UserDO one = userDAO.selectById(1L);
-		logger.info("name=" + one.getUsername());
-	}
+		logger.info("@@1@@  name=" + one.getUsername());
 
-	@Test
-	public void getUser2() {
-		UserDO one = userDAO.getOne(1L);
-		logger.info("name=" + one.getUsername());
+		one = userDAO.getOne(1L);
+		logger.info("@@2@@  name=" + one.getUsername());
 		List<UserDO> all = userDAO.getAll();
 		logger.info("all size={}",all.size());
+		logger.info("end $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 	}
+
+//	@Test
+//	public void getUser2() {
+//		UserDO one = userDAO.getOne(1L);
+//		logger.info("name=" + one.getUsername());
+//		List<UserDO> all = userDAO.getAll();
+//		logger.info("all size={}",all.size());
+//	}
 
 }
