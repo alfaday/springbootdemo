@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class SpringbootApplicationTests {
 	private UserDAO userDAO;
 
 	@Test
+	@Transactional
 	public void getUser() {
 		UserDO one = userDAO.selectById(1L);
 		logger.info("@@1@@  name=" + one.getUsername());
@@ -36,6 +38,7 @@ public class SpringbootApplicationTests {
 	}
 
 	@Test
+	@Transactional
 	public void insertUser(){
 		UserDO one = new UserDO();
 		one.setNickName("test");
@@ -44,6 +47,7 @@ public class SpringbootApplicationTests {
 		one.setUserSex("male");
 		int insert = userDAO.insert(one);
 		logger.info("insert ok, id={}",one.getId());
+
 	}
 
 }
