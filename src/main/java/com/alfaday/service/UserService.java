@@ -1,6 +1,6 @@
 package com.alfaday.service;
 
-import com.alfaday.dao.dos.UserDO;
+import com.alfaday.dao.model.UserDO;
 import com.alfaday.dao.mapper.UserDAO;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

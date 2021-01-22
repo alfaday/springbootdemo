@@ -1,6 +1,6 @@
 package com.alfaday.application;
 
-import com.alfaday.dao.dos.UserDO;
+import com.alfaday.dao.model.UserDO;
 import com.alfaday.dao.mapper.UserDAO;
 
 import org.junit.Test;
