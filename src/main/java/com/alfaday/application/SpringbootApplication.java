@@ -6,8 +6,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.alfaday.dao.mapper")
+
 @SpringBootApplication(scanBasePackages = "com.alfaday")
+@MapperScan("com.alfaday.dao.mapper")
 @MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
 public class SpringbootApplication {
 

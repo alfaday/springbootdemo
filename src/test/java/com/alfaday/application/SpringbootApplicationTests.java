@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class SpringbootApplicationTests {
@@ -23,9 +25,16 @@ public class SpringbootApplicationTests {
 
 	@Test
 	public void getUser() {
-
 		UserDO one = userDAO.selectById(1L);
 		logger.info("name=" + one.getUsername());
+	}
+
+	@Test
+	public void getUser2() {
+		UserDO one = userDAO.getOne(1L);
+		logger.info("name=" + one.getUsername());
+		List<UserDO> all = userDAO.getAll();
+		logger.info("all size={}",all.size());
 	}
 
 }
