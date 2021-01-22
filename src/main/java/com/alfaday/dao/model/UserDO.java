@@ -1,4 +1,4 @@
-package com.alfaday.dao.dos;
+package com.alfaday.dao.model;
 
 import lombok.Data;
 
