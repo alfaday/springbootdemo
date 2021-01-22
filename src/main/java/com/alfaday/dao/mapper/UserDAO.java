@@ -11,7 +11,4 @@ public interface UserDAO extends BaseMapper<UserDO> {
 
     List<UserDO> getAll();
     UserDO getOne(Long id);
-//    void insert(UserDO user);
-//    void update(UserDO user);
-//    void delete(Long id);
 }
