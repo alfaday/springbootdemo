@@ -1,4 +1,4 @@
-package com.alfaday.mytools.nio;
+package com.alfaday.tools.demo.io.nio;
 
 
 import java.io.IOException;

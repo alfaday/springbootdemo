@@ -1,7 +1,7 @@
-package com.alfaday.mytools.bio;
+package com.alfaday.tools.demo.io.bio;
 
 
-import com.alfaday.mytools.nio.Constant;
+import com.alfaday.tools.demo.io.nio.Constant;
 
 import java.io.IOException;
 import java.io.InputStream;
