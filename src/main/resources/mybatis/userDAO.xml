@@ -16,7 +16,7 @@
     <select id="getAll" resultMap="BaseResultMap"  >
         SELECT
         <include refid="Base_Column_List" />
-        FROM user
+        FROM user limit 100
     </select>
 
     <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap" >
@@ -26,29 +26,4 @@
         WHERE id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.alfaday.dao.model.UserDO" >
-        INSERT INTO
-        user
-        (username,password,user_sex)
-        VALUES
-        (#{username}, #{password}, #{userSex})
-    </insert>
-
-    <update id="update" parameterType="com.alfaday.dao.model.UserDO" >
-        UPDATE
-        user
-        SET
-        <if test="username != null">username = #{username},</if>
-        <if test="password != null">password = #{password},</if>
-        nick_name = #{nickName}
-        WHERE
-        id = #{id}
-    </update>
-
-    <delete id="delete" parameterType="java.lang.Long" >
-        DELETE FROM
-        user
-        WHERE
-        id =#{id}
-    </delete>
 </mapper>

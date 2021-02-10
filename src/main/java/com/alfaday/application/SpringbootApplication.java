@@ -5,9 +5,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@MapperScan("com.alfaday.dao.mapper")
+
 @SpringBootApplication(scanBasePackages = "com.alfaday")
+@MapperScan("com.alfaday.dao.mapper")
+@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
+@EnableTransactionManagement
 public class SpringbootApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(SpringbootApplication.class);

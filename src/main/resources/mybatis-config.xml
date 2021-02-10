@@ -21,9 +21,9 @@
         <setting name="localCacheScope" value="SESSION"/>
     </settings>
 
-<!--    <typeAliases>-->
-<!--        <typeAlias alias="blog" type="com.wuzz.domain.Blog" />-->
-<!--    </typeAliases>-->
+    <!--    <typeAliases>-->
+    <!--        <typeAlias alias="blog" type="com.wuzz.domain.Blog" />-->
+    <!--    </typeAliases>-->
 
     <!--    <typeHandlers>
             <typeHandler handler="com.wuzz.type.MyTypeHandler"></typeHandler>
@@ -42,22 +42,22 @@
             </plugin>
         </plugins>-->
 
-<!--    <environments default="development">-->
-<!--        <environment id="development">-->
-<!--            <transactionManager type="JDBC"></transactionManager>-->
-<!--            <dataSource type="com.alfadayaday.config.DruidDataSourceFactory">-->
-<!--                <property name="driverClassName" value="${driver}"/>-->
-<!--                <property name="url" value="${url}"/>-->
-<!--                <property name="username" value="${username}"/>-->
-<!--                <property name="password" value="${password}"/>-->
-<!--                <property name="initialSize" value="${initialSize}"/>-->
-<!--                <property name="maxActive" value="${maxActive}"/>-->
-<!--                <property name="maxWait" value="${maxWait}"/>-->
-<!--                <property name="poolPreparedStatements" value="${poolPreparedStatements}"/>-->
-<!--                <property name="maxPoolPreparedStatementPerConnectionSize" value="${maxPoolPreparedStatementPerConnectionSize}"/>-->
-<!--            </dataSource>-->
-<!--        </environment>-->
-<!--    </environments>-->
+    <!--    <environments default="development">-->
+    <!--        <environment id="development">-->
+    <!--            <transactionManager type="JDBC"></transactionManager>-->
+    <!--            <dataSource type="com.alfadayaday.config.DruidDataSourceFactory">-->
+    <!--                <property name="driverClassName" value="${driver}"/>-->
+    <!--                <property name="url" value="${url}"/>-->
+    <!--                <property name="username" value="${username}"/>-->
+    <!--                <property name="password" value="${password}"/>-->
+    <!--                <property name="initialSize" value="${initialSize}"/>-->
+    <!--                <property name="maxActive" value="${maxActive}"/>-->
+    <!--                <property name="maxWait" value="${maxWait}"/>-->
+    <!--                <property name="poolPreparedStatements" value="${poolPreparedStatements}"/>-->
+    <!--                <property name="maxPoolPreparedStatementPerConnectionSize" value="${maxPoolPreparedStatementPerConnectionSize}"/>-->
+    <!--            </dataSource>-->
+    <!--        </environment>-->
+    <!--    </environments>-->
 
 
 </configuration>
