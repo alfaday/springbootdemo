@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 public class IndexController {
 
@@ -15,4 +16,5 @@ public class IndexController {
         logger.info("/index");
         return "index2.html";
     }
+
 }

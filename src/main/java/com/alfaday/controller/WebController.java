@@ -8,12 +8,16 @@ import com.google.common.cache.LoadingCache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.PostConstruct;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -25,6 +29,9 @@ public class WebController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RedisTemplate<String,Object> redisTemplate;
 
     private Map<String,String> map;
 
@@ -73,6 +80,14 @@ public class WebController {
         map.put("b","2");
         map.put("c","3");
         logger.info("WebController init");
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/redis")
+    public String setGet(){
+        ValueOperations<String, Object> ops = redisTemplate.opsForValue();
+        Boolean aBoolean = ops.setIfAbsent("test-info", "test-value");
+        return "ret=" + aBoolean;
     }
 
 
