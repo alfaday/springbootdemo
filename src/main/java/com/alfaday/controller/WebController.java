@@ -2,6 +2,10 @@ package com.alfaday.controller;
 
 import com.alfaday.aop.LogAnnotation;
 import com.alfaday.service.UserService;
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.ConfigService;
+import com.ctrip.framework.apollo.model.ConfigChangeEvent;
+import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -98,4 +102,26 @@ public class WebController {
         }
         return "0";
     }
+
+    @ApolloConfigChangeListener("application")
+    private void anotherOnChange(ConfigChangeEvent changeEvent) {
+        logger.info( "Namespace=" +changeEvent.getNamespace());
+        for(String key : changeEvent.changedKeys()){
+            logger.info("key={},old value={},new value={}",
+                    key,
+                    changeEvent.getChange(key).getOldValue(),
+                    changeEvent.getChange(key).getNewValue());
+        }
+    }
+
+
+    public void configTest(){
+        Config config = ConfigService.getConfig("application");
+        String key = "timeout";
+        String someDefaultValue = "";
+        String value = config.getProperty(key, someDefaultValue);
+
+    }
+
+
 }

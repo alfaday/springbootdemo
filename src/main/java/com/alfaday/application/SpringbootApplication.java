@@ -1,5 +1,6 @@
 package com.alfaday.application;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.alfaday.dao.mapper")
 @MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
 @EnableTransactionManagement
+@EnableApolloConfig
 public class SpringbootApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(SpringbootApplication.class);
