@@ -16,6 +16,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+/**
+ * 通过自定义注解实现aop
+ */
 @Aspect
 @Component
 public class WebLogAspect {
